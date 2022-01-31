@@ -10,11 +10,11 @@
     <body>
         <h1 class="to-do__heading">Your to do list:</h1>
         <section class="to-do__instructions">
-            <p class="to-do__instruction">Enter your to-dos in input field</p>
-            <p class="to-do__instruction">Click your to-do to mark it as finished</p>
-            <p class="to-do__instruction">Click 'x' to remove item from to-do list</p>
+            <p class="to-do__instruction yellow-txt">Enter your to-dos in input field</p>
+            <p class="to-do__instruction green-txt">Click your to-do to mark it as finished</p>
+            <p class="to-do__instruction dark-txt">Click 'x' to remove item from to-do list</p>
         </section>
-        <form action="" class="to-do__form">
+        <form action="" class="to-do__form" id="to-do__form">
             <input
                 type="text"
                 name="new-list-item"
@@ -37,8 +37,13 @@
                 </svg>
             </button>
         </form>
+        <table class="message" id="message" hidden>
+            Cant add an empty task.
+        </table>
+
         <main class="to-do__main">
             <ul id="to-do__list" class="to-do__list"></ul>
         </main>
+        <script src="app.js"></script>
     </body>
 </html>

@@ -53,14 +53,19 @@ function remove(event) {
     saveToDos()
     initToDos()
 }
-function showInvalidInput() {
+function showInvalidInput(message) {
+    msg.innerHTML = message
     msg.hidden = false
     inputElement.style.border = '1px solid red'
 }
 function addToDo() {
-    const toDoText = inputElement.value
+    const toDoText = inputElement.value.trim()
     if (toDoText.length == 0) {
-        return showInvalidInput()
+        return showInvalidInput('Cant accept an empty task')
+    }
+    let exists = toDos.find((item) => item.txt === toDoText)
+    if (exists) {
+        return showInvalidInput('This task already exists in todos')
     }
     toDos.push({ id: new Date().getTime(), txt: toDoText, done: false })
     saveToDos()

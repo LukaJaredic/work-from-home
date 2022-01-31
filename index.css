@@ -76,11 +76,10 @@ body {
     position: relative;
     border-radius: 2px;
     box-sizing: border-box;
-    transition: all ease-in-out 200ms;
+    transition: all ease-in-out 100ms;
 }
 .to-do__item:hover {
-    opacity: 0.5;
-    text-decoration: line-through;
+    background: rgba(172, 255, 47, 0.288);
 }
 
 .message {
@@ -104,7 +103,12 @@ body {
 }
 .finished {
     background: greenyellow;
+    color: black;
     text-decoration: line-through;
+}
+
+.finished > button {
+    color: black;
 }
 .yellow-txt {
     color: yellow;

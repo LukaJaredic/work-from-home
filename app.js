@@ -68,6 +68,7 @@ function addToDo() {
         return showInvalidInput('This task already exists in todos')
     }
     toDos.push({ id: new Date().getTime(), txt: toDoText, done: false })
+    inputElement.value = ''
     saveToDos()
     initToDos()
 }

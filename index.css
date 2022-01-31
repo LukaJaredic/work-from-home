@@ -83,8 +83,19 @@ body {
 }
 
 .message {
-    color: red;
+    color: tomato;
+    animation: popOut ease-in-out 400ms;
 }
+
+@keyframes popOut {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .close {
     background: transparent;
     color: white;
